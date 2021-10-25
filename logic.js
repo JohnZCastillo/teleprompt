@@ -65,5 +65,5 @@ let run = false;
 function getSpeed(){
     return scrollSpeed.value;
 }
-setInterval(scroll,20);
+setInterval(scroll,10);
 

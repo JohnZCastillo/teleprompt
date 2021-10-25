@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 .display{
-    font-size: 4rem;
+    font-size: 3.5rem;
     transform: scale(-1, 1);
     border-radius: 5px;
     width: 100%;
