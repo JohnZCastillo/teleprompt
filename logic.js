@@ -4,6 +4,7 @@ function scroll(){
     }
 }
 
+
 function show(){
     content.innerHTML = input.value;
 }
@@ -19,6 +20,9 @@ function showDisplay(){
     inputSection.classList.add('hide');
     document.body.style.backgroundColor = "black";
 }
+
+
+
 const toTop = document.querySelector('.totop');
     toTop.addEventListener('click',()=>{
         content.scrollTop = 0;
@@ -29,6 +33,10 @@ const input = document.querySelector('.input__content');
 const content = document.querySelector(".display");
 const displaySection = document.querySelector('.display-section');
 const inputSection = document.querySelector('.input');
+const invertButton = document.querySelector('.invertButton');
+    invertButton.addEventListener('click',()=>{
+        content.classList.toggle("invert");
+    })
 
 const hide = document.querySelector('.hideDislay');
     hide.addEventListener('click',()=>{
@@ -46,24 +54,31 @@ const stop = document.querySelector('.stop');
         }
     })
 
-
-const scrollSpeed = document.querySelector('.speed');
-    
 const start = document.querySelector('.start');
     start.addEventListener('click',()=>{
         show();
         showDisplay();
-        setTimeout(()=>{
-            run = true;
-        },2000)
-     
+        run = true;
     });
     
 
 let run = false;
 
-function getSpeed(){
-    return scrollSpeed.value;
-}
-setInterval(scroll,13);
+const scrollSpeed = document.querySelector('.speed');
+    scrollSpeed.addEventListener('keydown',()=>{
+        if(scrollSpeedPrev != scrollSpeed.value){
+            console.log('hello')
+            clearInterval(scrolling);
+            init();
+        }
+    })
+    
+    let scrolling;
 
+    function init(){
+         scrolling =  setInterval(scroll,scrollSpeed.value);
+    }
+    let scrollSpeedPrev = scrollSpeed.value;
+    
+    init();
+    
