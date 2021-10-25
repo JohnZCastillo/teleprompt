@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="input">
+        <div class="input__config">
+            <label for="scorll-value">Scroll speed</label>
+            <input type="text" class="speed" value="10" name="scroll-value">
+            <button class="start">start</button>
+        </div>
+        <textarea spellcheck="false" class="input__content" name="content here" placeholder="paste your content here" rows="4" cols="50"></textarea>
+    </section>
+
+  <div class="display-section hide">
+      <div class="display-buttons">
+        <button class="stop">Stop / Start</button>
+        <button class="hideDislay">hide </button>
+        <button class="totop">Back to Top </button>
+      </div>
+      <textarea class="display"  rows="4" cols="50" spellcheck="false"></textarea>
+  </div>
+  
+    <script src="logic.js"></script>
+</body>
+</html>

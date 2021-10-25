@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 1.5em;
+    border-radius: .5em;
+    background-color:#3D405B;
+    box-shadow: 1px 1px 5px grey;
+    margin: 0 auto;
+    color: white;
+    margin-top: 1em;
+}
+.input__config{
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+.input__config > button{
+    padding: .5em 1em;
+    cursor: pointer;
+}
+.input__content{
+    min-height: 300px;
+}
+
+
+/* display section */
+.display-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    width: 100vw;
+    max-width: 1000px;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+
+.display-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.display-buttons > button{
+    padding: .5em 1em;
+    cursor: pointer;
+}
+.display{
+    font-size: 4rem;
+    transform: scale(-1, 1);
+    box-shadow: 4px 4px 1em grey;
+    border-radius: 5px;
+    width: 100%;
+    height:100%;
+}
+
+.hide{
+    display: none;
+}
